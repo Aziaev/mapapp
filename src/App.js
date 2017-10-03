@@ -1,19 +1,21 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
 import Map from './components/Map'
 import Places from './components/Places'
 
 class App extends Component {
-    render(){
+    render() {
         return (
             <div>
                 This is the REACT APP!
-                <Map/>
-                <Places />
+                <div style={{width: 300, height: 600, background:'red'}}>
+                    <Map/>
+                </div>
+                <Places/>
             </div>
         )
     }
 }
 
-ReactDOM.render(<App />, document.getElementById('app'))
+ReactDOM.render(<App/>, document.getElementById('app'))
 

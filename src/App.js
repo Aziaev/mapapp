@@ -1,15 +1,19 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-import Map from './components/Map'
 import Places from './components/Places'
+import Map from "./components/Map";
 
 class App extends Component {
     render() {
+        const location = {
+            lat: 55.75225,
+            lng: 48.74449};
+
         return (
             <div>
-                This is the REACT APP!
-                <div style={{width: 300, height: 600, background:'red'}}>
-                    <Map/>
+                THIS IS REACT APP~
+                <div style={{width: 300, height: 600, background: 'red'}}>
+                    <Map center={location}/>
                 </div>
                 <Places/>
             </div>
@@ -17,5 +21,5 @@ class App extends Component {
     }
 }
 
-ReactDOM.render(<App/>, document.getElementById('app'))
+ReactDOM.render(<App/>, document.getElementById('app'));
 
